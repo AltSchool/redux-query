@@ -5,13 +5,6 @@ const webpack = require('webpack');
 
 var env = process.env.NODE_ENV;
 
-var reactExternal = {
-  root: 'React',
-  commonjs2: 'react',
-  commonjs: 'react',
-  amd: 'react',
-};
-
 var reduxExternal = {
   root: 'Redux',
   commonjs2: 'redux',
@@ -21,8 +14,7 @@ var reduxExternal = {
 
 module.exports = {
   externals: {
-    'react': reactExternal,
-    'redux': reduxExternal,
+    'redux': reduxExternal
   },
   entry: {
     'redux-query': './src/index.js',
